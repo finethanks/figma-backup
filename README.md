@@ -9,6 +9,15 @@
 
 <hr />
 
+## New Install
+
+```
+node = 20
+npm i
+npm run build
+node ./lib/index.js ПАРАМЕТРЫ УТИЛИТЫ
+```
+
 ## Installation
 
 1- Make sure you have [Node.js](https://nodejs.org) installed on your machine.\
