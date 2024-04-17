@@ -31,6 +31,8 @@ const saveLocalCopy = async (
   await page.keyboard.up(MainKeyInput);
 
   try {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     await page.waitForSelector("[class*='quick_actions--search']", {
       timeout: interactionDelay
     });
@@ -45,6 +47,8 @@ const saveLocalCopy = async (
   await page.keyboard.type("save local copy", { delay: typingDelay });
 
   try {
+    // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+    // @ts-ignore
     await page.waitForSelector("[class*='quick_actions--result']", {
       timeout: interactionDelay
     });

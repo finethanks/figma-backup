@@ -2,7 +2,7 @@ import chalk from "chalk";
 import clui from "clui";
 import fs from "fs";
 import path from "path";
-import puppeteer, { Browser, Page } from "puppeteer";
+import puppeteer, { Browser, Page, Protocol } from "puppeteer";
 import { BACKUP_DIR, COOKIES_PATH, ROOT_DIR } from "./constants";
 import { AuthorizationError, BackupError } from "./errors";
 import FileSystemCookiesProvider from "./FileSystemCookiesProvider";
@@ -35,7 +35,7 @@ export interface IBotOptions {
   typingDelay?: number;
 }
 
-export type Cookie = puppeteer.Protocol.Network.CookieParam;
+export type Cookie = Protocol.Network.CookieParam;
 export type Cookies = Cookie[];
 
 export interface SessionData {

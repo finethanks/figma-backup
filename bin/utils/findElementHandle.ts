@@ -11,6 +11,8 @@ const findElementHandle = async (
 ): Promise<ElementHandle> => {
   if (selector) {
     try {
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-ignore
       await page.waitForSelector(selector);
     } catch {
       throw new Error(`Element that matches selector "${selector}" not found.`);
